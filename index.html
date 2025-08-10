@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bulut Kaşifleri — Mini Cloud CTF</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; line-height: 1.5; }
+    .container { max-width: 840px; margin: 0 auto; }
+    .card { border: 1px solid #d0d7de; border-radius: 12px; padding: 1rem 1.25rem; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    h1 { margin: 0 0 0.5rem 0; font-size: 1.6rem; }
+    p { margin: 0.25rem 0 1rem 0; color: #57606a; }
+    button { padding: 0.6rem 1rem; border: 1px solid #d0d7de; border-radius: 10px; cursor: pointer; background: #0969da; color: #fff; font-weight: 600; }
+    button:hover { background: #085ec3; }
+    pre { background: #f6f8fa; padding: 1rem; overflow: auto; border-radius: 10px; border: 1px solid #d0d7de; }
+    footer { margin-top: 1.25rem; color: #6e7781; font-size: 0.9rem; }
+    @media (prefers-color-scheme: dark) {
+      .card { background: #0d1117; border-color: #30363d; }
+      p, footer { color: #8b949e; }
+      pre { background: #161b22; border-color: #30363d; }
+      button { background: #238636; border-color: #2ea043; }
+      button:hover { background: #2ea043; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Bulut Üssü</h1>
+      <p>Bu sayfa GitHub Pages üzerinde yayınlanan basit bir açılış sayfasıdır.</p>
+      <button id="fetchBtn">Verileri Getir</button>
+      <p id="status" aria-live="polite"></p>
+      <pre id="output">Hazır...</pre>
+      <footer>
+        Görev 4’te API entegrasyonu eklenecek. Şimdilik buton bilgilendirme amaçlıdır.
+      </footer>
+    </div>
+  </div>
+  <script>
+    document.getElementById('fetchBtn').addEventListener('click', () => {
+      const statusEl = document.getElementById('status');
+      const outputEl = document.getElementById('output');
+      statusEl.textContent = 'Henüz API entegre edilmedi (Görev 4’te eklenecek).';
+      outputEl.textContent = 'Örnek çıktı burada görünecek.';
+    });
+  </script>
+</body>
+</html>
